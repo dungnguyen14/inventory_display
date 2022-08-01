@@ -3,6 +3,5 @@
 # otherwise, oTree will automatically overwrite it.
 psycopg2>=2.8.4
 sentry-sdk==0.7.9
-otree[mturk]>=5.8.0
 scikit_learn==1.1.1
-pandas==0.25.3
+pandas==1.4.2
