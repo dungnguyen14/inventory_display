@@ -5,4 +5,4 @@ psycopg2>=2.8.4
 sentry-sdk==0.7.9
 scikit_learn==1.1.1
 pandas==1.4.2
-otree[mturk]<=5.8.0
+otree[mturk]>=5.8.0
