@@ -1,0 +1,18 @@
+{{ block title }}
+Task Description 2/2
+{{ endblock }}
+{{ block content }}
+
+Your task is to select to "Go" or "Not go" to the store, given your demand (desired number of items),
+and the displayed inventory  on the website. Your decision screen is as follow:
+<img src="{{ static 'example_exp.png' }}"
+
+     height="200" />
+
+After that the actual inventory will be revealed, which reflects the fact that we only know
+how many items are actually available when visiting the store. The actual inventory will be equal
+to the displayed inventory minus the inventory error.
+
+    {{ next_button }}
+
+{{ endblock }}

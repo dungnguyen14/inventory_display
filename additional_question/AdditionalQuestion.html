@@ -1,0 +1,46 @@
+{{ block title }}
+    Additional Questions
+{{ endblock }}
+{{ block content }}
+
+<table class="table">
+    <tr>
+
+        <th></th>
+        <th></th>
+
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+
+
+        <th></th>
+
+    <tr>
+        <tr>
+            <th>{{ form.ques_check_inv.label }}</th>
+            <td> Not at all </td>
+            {{ for choice in form.ques_check_inv }}
+                <td>{{ choice }}</td>
+            {{ endfor }}
+            <td> Very much </td>
+
+        </tr>
+    <tr>
+        <tr>
+            <th>{{ form.ques_check_inv5.label }}</th>
+            <td> Not at all </td>
+            {{ for choice in form.ques_check_inv5 }}
+                <td>{{ choice }}</td>
+            {{ endfor }}
+            <td> Very much </td>
+
+        </tr>
+
+</table>
+
+    {{ next_button }}
+
+{{ endblock }}

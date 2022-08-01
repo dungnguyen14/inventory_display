@@ -1,0 +1,13 @@
+{{ block title }}
+Fail attention check
+{{ endblock }}
+{{ block content }}
+{{ if player.round_number == 1 }}
+You didn't answer correctly. Please read again the instruction and answer the questions again. You only have one more trial, so please answer correctly!
+    {{ next_button }}
+{{ else }}
+You failed to answer the questions twice. You cannot continue with the experiment.
+Please close the experiment now.
+{{ endif }}
+
+{{ endblock }}

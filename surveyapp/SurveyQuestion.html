@@ -1,0 +1,17 @@
+{{ block title }}Background questions{{ endblock }}
+{{ block content }}
+
+    <p>
+        Please answer the following questions.
+    </p>
+
+    {{ formfield player.age }}
+    {{ formfield player.gender }}
+    {{ formfield player.income }}
+    {{ formfield player.education }}
+
+
+
+    {{ next_button }}
+
+{{ endblock }}

@@ -1,0 +1,17 @@
+{{ block title }}Survey{{ endblock }}
+{{ block content }}
+
+    <p>
+        Please answer the following questions.
+    </p>
+Question 1
+    {{ formfield player.age }}
+Question 2
+    {{ formfield player.is_lefthanded }}
+
+Question 3
+    {{ formfield player.gender }}
+
+    {{ next_button }}
+
+{{ endblock }}

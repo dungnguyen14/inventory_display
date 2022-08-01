@@ -1,0 +1,36 @@
+{{ block title }}
+   Result: Round {{player.round_number}}
+{{ endblock }}
+
+{{ block content }}
+<table class="table">
+    <tr>
+        <th>Round</th>
+        <th>Your demand</th>
+        <th>Displayed inventory</th>
+        <th>Decision</th>
+        <th>Actual inventory</th>
+        <th>Outcome</th>
+
+    <tr>
+            <td>{{player.round_number}}</td>
+            <td>{{player.demand}}</td>
+            <td>{{player.display_inventory}}</td>
+            <td> {{ player.decision }}</td>
+            <td>{{player.actual_inventory}}</td>
+            <td>{{ if player.attention_check == True and player.decision == "Go"  }}
+                {{ " "}}
+                {{else}}
+            {{player.payoff}}
+            {{ endif }}</td>
+        </tr>
+</table>
+{{ if player.attention_check == True and player.decision == "Go"  }}
+Warning: You aren't paying attention!
+{{ endif }}
+<br>
+Total points: {{combined_payoff}}
+    {{ next_button }}
+{{ endblock }}
+
+

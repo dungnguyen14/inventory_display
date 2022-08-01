@@ -1,0 +1,19 @@
+{{ block title }}
+Payment
+{{ endblock }}
+{{ block content }}
+In each round you will receive a
+bonus, a penalty or 0. If you choose not to go to the store, you don't receive or lose any points.
+
+<br>If you choose to go to the store:
+<ul>
+
+    <li>... and your demand is higher than the actual inventory (e.g, your demand is 3 units and the actual inventory is 1 unit), which means you won't be able to buy as
+        many items as you planned, you'll be penalized with minus points.</li>
+    <li>... and your demand is lower your actual inventory (e.g, your demand is 3 units and the actual inventory is 4 unit), which means you can purchase as many items as you anticipated,
+        you will receive a bonus represented by plus points.</li>
+</ul>
+Your starting budget is 5 points. Then your penalty / bonus will be added. In the end the earned points will be exchanged into $USD with the exchange rate 4 points = $1. You will also receive a show-up bonus of $1.5.
+    {{ next_button }}
+
+{{ endblock }}

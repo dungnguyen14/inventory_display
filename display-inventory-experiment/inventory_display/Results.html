@@ -1,0 +1,28 @@
+{{ block title }}
+   Round {{player.round_number}}
+{{ endblock }}
+
+{{ block content }}
+<table class="table">
+    <tr>
+        <th>Round</th>
+        <th>Displayed inventory</th>
+        <th>Your demand</th>
+        <th>Decision</th>
+        <th>Actual inventory</th>
+        <th>Outcome</th>
+
+    <tr>
+            <td>{{player.round_number}}</td>
+            <td>{{player.display_inventory}}</td>
+            <td>{{player.demand}}</td>
+            <td> {{ player.decision }}</td>
+            <td>{{player.actual_inventory}}</td>
+            <td>{{player.payoff}}</td>
+        </tr>
+</table>
+Total points: {{combined_payoff}}
+    {{ next_button }}
+{{ endblock }}
+
+

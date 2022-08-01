@@ -1,0 +1,50 @@
+{{ block title }}
+   Round {{player.round_number}}
+{{ endblock }}
+{{ block content }}
+You check online the inventory at the store to decide whether or not to go to the store to purchase certain goods. You know the number of units that
+would need to buy. However, the inventory information displayed online might be incorrect, e.g., since inventory has been lost, misplaced or it is just outdated.
+ <br>  <br>If you go the store and sufficient inventory is available you will get a bonus of {{C.payment_per_correct_answer}} coin, if you go to the store and
+there is no sufficient inventory you will face a penalty of  <mark>{{player.penalty_per_wrong_answer}}</mark>  coins. If you decide to not go to the store it will not affect your payment.
+
+{{ if player.round_number == 7  }}
+  <br>   <br><p style="background-color: #FFFF00"> Now you get the information that the displayed inventory has an error the U(0,4). e.g. it is equally likely that the inventory is 0,1,2,3 or 4 units lower than the displayed inventory. For example, if the displayed inventory is 6 units, it is equally likely that the actual inventory is 6,5,4,3 or 2 units.
+Of course inventory cannot be negative, if the displayed inventory is 2 there is a 60% chance that the actual inventory is 0, a 20% chance that inventory is 1 and a 20% chance that inventory is 2.  </p>
+{{ endif }}
+
+{{ if player.round_number > 7  }}
+  <br>  <br>Now you get the information that the displayed inventory has an error the U(0,4). e.g. it is equally likely that the inventory is 0,1,2,3 or 4 units lower than the displayed inventory. For example, if the displayed inventory is 6 units, it is equally likely that the actual inventory is 6,5,4,3 or 2 units.
+Of course inventory cannot be negative, if the displayed inventory is 2 there is a 60% chance that the actual inventory is 0, a 20% chance that inventory is 1 and a 20% chance that inventory is 2.
+{{ endif }}
+<table class="table">
+    <tr>
+        <th>Round</th>
+        <th>Your demand</th>
+        <th>Displayed inventory</th>
+        <th>Decision</th>
+        <th>Actual inventory</th>
+            <th>Outcome</th>
+
+    <tr>
+            <td>{{player.round_number}}</td>
+            <td>{{player.demand}}</td>
+
+            <td>{{player.display_inventory}}</td>
+            <td> {{ formfields }}</td>
+            <td></td>
+            <td></td>
+        </tr>
+</table>
+
+The next button will be activated in 5 seconds.
+  <br>
+<script>
+    window.onload = function () {
+        setTimeout(function(){document.querySelector("#Next").style.visibility = "visible";}, 3000);
+    }
+</script>
+
+<button class="o-tree-btn-next btn btn-primary" id="Next" style="visibility:hidden;">Next</button>
+
+
+{{ endblock }}

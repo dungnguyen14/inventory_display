@@ -1,0 +1,21 @@
+{{ block title }}
+Example
+{{ endblock }}
+{{ block content }}
+
+Your task is to select to "Go" or "Not go" to the store, given your demand (desired number of items),
+and the displayed inventory  on the website. Your decision screen is as follow:
+<img src="{{ static 'example_exp.png' }}"
+
+     height="200" />
+<br>
+<br>
+
+Once you make your decision the actual inventory will be revealed. The actual inventory will be equal
+to the displayed inventory minus the inventory error. For instance, if the displayed inventory is 6 units and the inventory error is 2 units, the actual inventory will be 4 units.
+<br>
+<br>
+
+    {{ next_button }}
+
+{{ endblock }}
